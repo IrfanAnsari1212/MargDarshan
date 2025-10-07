@@ -9,7 +9,7 @@ import ChatForum from "./ChatForum";
 import Analytics from "./Analytics";
 import Profile from "./Profile";
 import { Routes, Route } from "react-router-dom";
-
+import Notifications from "./Notifications";
 export default function DashboardLayout() {
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -24,6 +24,7 @@ export default function DashboardLayout() {
           <Route path="chat" element={<ChatForum />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="notifications" element={<Notifications />} />
         </Routes>
       </div>
     </div>

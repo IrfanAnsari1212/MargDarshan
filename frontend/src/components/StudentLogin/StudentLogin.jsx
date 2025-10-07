@@ -36,9 +36,9 @@ export default function StudentLogin() {
       
       // Fixed condition - only check for token existence
       if (data.token) {
-        localStorage.setItem("studentToken", data.token);
-        console.log('Token saved, navigating to dashboard'); // Debug log
-        navigate("/dashboard");
+  localStorage.setItem("studentToken", data.token);
+  localStorage.setItem("studentData", JSON.stringify(data.student)); // Store student info
+  navigate("/dashboard");
       } else {
         setApiError(data.message || "Login failed");
       }
